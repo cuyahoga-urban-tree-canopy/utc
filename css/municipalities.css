@@ -1,0 +1,40 @@
+/** choropleth visualization */
+
+#utc_summarized_all{
+  line-color: #FFF;
+  line-opacity: 1;
+  line-width: 1;
+  polygon-opacity: 0.8;
+}
+
+#utc_summarized_all::labels {
+  text-name: [name];
+  text-halo-fill: #FFF;
+  text-halo-radius: 1;
+  text-face-name: 'DejaVu Sans Book';
+  text-size: 7.5;
+  text-allow-overlap: true;
+  text-fill: #000;
+}
+
+#utc_summarized_all [ percent_canopy <= 77.8453624973071 ] {
+   polygon-fill: #005824;
+}
+#utc_summarized_all [ percent_canopy <= 47.548148744051] {
+   polygon-fill: #238B45;
+}
+#utc_summarized_all [ percent_canopy <= 40.1953650306495] {
+   polygon-fill: #41AE76;
+}
+#utc_summarized_all [ percent_canopy <= 30.482525449494] {
+   polygon-fill: #66C2A4;
+}
+#utc_summarized_all [ percent_canopy <= 24.3489773245938] {
+   polygon-fill: #CCECE6;
+}
+#utc_summarized_all [ percent_canopy <= 21.2173996429018] {
+   polygon-fill: #D7FAF4;
+}
+#utc_summarized_all [ percent_canopy <= 18.0473166617331] {
+   polygon-fill: #EDF8FB;
+}
