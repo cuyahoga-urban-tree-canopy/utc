@@ -3,4 +3,4 @@
 urban-tree-canopy
 =================
 
-CartoDB queries and CartoCSS for Urban Tree Canopy site
+A quick and dirty repo for maintaining CartoDB queries and CartoCSS for an Urban Tree Canopy for Cuyahoga County.
