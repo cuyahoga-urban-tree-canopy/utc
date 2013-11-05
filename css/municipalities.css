@@ -1,4 +1,4 @@
-/** Basic wizard created green-theme chloropleth for percent canopy.  Quantile with 7 categories */
+/** Chloropleth for percent canopy.  Quantile with 7 categories */
 
 #utc_summarized_all{
   line-color: #FFF;
@@ -7,7 +7,11 @@
   polygon-opacity: 0.8;
 }
 
-#utc_summarized_all::labels {
+// Display City labels between zoom 10 and 13
+
+#utc_summarized_all::labels
+[zoom > 10] [zoom < 13]
+{
   text-name: [name];
   text-halo-fill: #FFF;
   text-halo-radius: 1;
@@ -17,24 +21,26 @@
   text-fill: #000;
 }
 
-#utc_summarized_all [ percent_canopy <= 77.8453624973071 ] {
+// City/SPA color breakdown with zoom limits
+
+#utc_summarized_all [ percent_canopy <= 77.8453624973071 ] [zoom < 13] {
    polygon-fill: #005824;
 }
-#utc_summarized_all [ percent_canopy <= 47.548148744051] {
+#utc_summarized_all [ percent_canopy <= 47.548148744051] [zoom < 13] {
    polygon-fill: #238B45;
 }
-#utc_summarized_all [ percent_canopy <= 40.1953650306495] {
+#utc_summarized_all [ percent_canopy <= 40.1953650306495] [zoom < 13] {
    polygon-fill: #41AE76;
 }
-#utc_summarized_all [ percent_canopy <= 30.482525449494] {
+#utc_summarized_all [ percent_canopy <= 30.482525449494] [zoom < 13] {
    polygon-fill: #66C2A4;
 }
-#utc_summarized_all [ percent_canopy <= 24.3489773245938] {
+#utc_summarized_all [ percent_canopy <= 24.3489773245938] [zoom < 13] {
    polygon-fill: #CCECE6;
 }
-#utc_summarized_all [ percent_canopy <= 21.2173996429018] {
+#utc_summarized_all [ percent_canopy <= 21.2173996429018] [zoom < 13] {
    polygon-fill: #D7FAF4;
 }
-#utc_summarized_all [ percent_canopy <= 18.0473166617331] {
+#utc_summarized_all [ percent_canopy <= 18.0473166617331] [zoom < 13] {
    polygon-fill: #EDF8FB;
 }
