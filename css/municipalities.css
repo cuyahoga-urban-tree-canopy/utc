@@ -9,19 +9,55 @@
   polygon-opacity: 0.8;
 }
 
-// Display City labels between zoom 10 and 13
+// Display City labels
 
 #utc_summarized_all::labels
-[zoom > 10] [zoom < 13]
+[zoom > 10] [zoom < 12]
 {
   text-name: [name];
   text-halo-fill: #FFF;
   text-halo-radius: 1;
   text-face-name: 'DejaVu Sans Book';
   text-size: 7.5;
-  text-allow-overlap: true;
-  text-fill: #000;
+
+  text-fill: #50357a;
 }
+
+#utc_summarized_all::labels
+[zoom = 12]
+{
+  text-name: [name];
+  text-halo-fill: #FFF;
+  text-halo-radius: 1;
+  text-face-name: 'DejaVu Sans Book';
+  text-size: 12;
+  text-fill: #50357a;
+}
+
+
+#utc_summarized_all::labels
+[zoom = 13]
+{
+  text-name: [name];
+  text-halo-fill: #FFF;
+  text-halo-radius: 1;
+  text-face-name: 'DejaVu Sans Book';
+  text-size: 18;
+  text-fill: #50357a;
+}
+
+#utc_summarized_all::labels
+[zoom >= 14]
+{
+  text-name: [name];
+  text-halo-fill: #FFF;
+  text-halo-radius: 1;
+  text-face-name: 'DejaVu Sans Book';
+  text-size: 24;
+  text-fill: #50357a;
+}
+
+
 
 // City/SPA color breakdown with zoom limits
 
