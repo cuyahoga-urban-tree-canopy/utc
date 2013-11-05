@@ -9,19 +9,20 @@
   polygon-opacity: 0.8;
 }
 
-// Display City labels between zoom 10 and 13
+// Display Tract labels between zoom 10 and 13
 
 #utc_summarized_all::labels
-[zoom < 15] [zoom > 12]
+[zoom = 14]
 {
   text-name: [name];
   text-halo-fill: #FFF;
   text-halo-radius: 1;
   text-face-name: 'DejaVu Sans Book';
-  text-size: 7.5;
-  text-allow-overlap: true;
+  text-size: 12;
+  text-allow-overlap: false;
   text-fill: #000;
 }
+
 
 // City/SPA color breakdown with zoom limits
 
