@@ -85,10 +85,19 @@
 
 // Now have everything but lines disappear at zoom 13
 #utc_summarized_all
-[zoom >= 13]
+[zoom = 13]
 {
   line-color: #000;
   line-opacity: 1;
-  line-width: 1.3;
+  line-width: 2;
+  polygon-opacity: 0;
+}
+
+#utc_summarized_all
+[zoom = 14]
+{
+  line-color: #000;
+  line-opacity: 1;
+  line-width: 3;
   polygon-opacity: 0;
 }
