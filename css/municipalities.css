@@ -3,7 +3,7 @@
 #utc_summarized_all
 [zoom < 13]
 {
-  line-color: #FFF;
+  line-color: #000;
   line-opacity: 1;
   line-width: 1;
   polygon-opacity: 0.8;
@@ -47,12 +47,12 @@
    polygon-fill: #EDF8FB;
 }
 
-// Now have everything disappear at zoom 13
+// Now have everything but lines disappear at zoom 13
 #utc_summarized_all
 [zoom >= 13]
 {
-  line-color: #FFF;
-  line-opacity: 0;
-  line-width: 0;
+  line-color: #000;
+  line-opacity: 1;
+  line-width: 1.3;
   polygon-opacity: 0;
 }
