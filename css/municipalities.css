@@ -1,6 +1,8 @@
 /** Chloropleth for percent canopy.  Quantile with 7 categories */
 
-#utc_summarized_all{
+#utc_summarized_all
+[zoom < 13]
+{
   line-color: #FFF;
   line-opacity: 1;
   line-width: 1;
@@ -43,4 +45,14 @@
 }
 #utc_summarized_all [ percent_canopy <= 18.0473166617331] [zoom < 13] {
    polygon-fill: #EDF8FB;
+}
+
+// Now have everything disappear at zoom 13
+#utc_summarized_all
+[zoom >= 13]
+{
+  line-color: #FFF;
+  line-opacity: 0;
+  line-width: 0;
+  polygon-opacity: 0;
 }
