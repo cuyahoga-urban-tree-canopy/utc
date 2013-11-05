@@ -1,0 +1,58 @@
+/** Chloropleth for percent canopy.  Quantile with 7 categories */
+
+#utc_summarized_all
+[zoom < 15] [zoom > 12]
+{
+  line-color: #FFF;
+  line-opacity: 1;
+  line-width: 1;
+  polygon-opacity: 0.8;
+}
+
+// Display City labels between zoom 10 and 13
+
+#utc_summarized_all::labels
+[zoom < 15] [zoom > 12]
+{
+  text-name: [name];
+  text-halo-fill: #FFF;
+  text-halo-radius: 1;
+  text-face-name: 'DejaVu Sans Book';
+  text-size: 7.5;
+  text-allow-overlap: true;
+  text-fill: #000;
+}
+
+// City/SPA color breakdown with zoom limits
+
+#utc_summarized_all [ percent_canopy <= 77.8453624973071 ] [zoom < 15] [zoom > 12] {
+   polygon-fill: #005824;
+}
+#utc_summarized_all [ percent_canopy <= 47.548148744051] [zoom < 15] [zoom > 12] {
+   polygon-fill: #238B45;
+}
+#utc_summarized_all [ percent_canopy <= 40.1953650306495] [zoom < 15] [zoom > 12] {
+   polygon-fill: #41AE76;
+}
+#utc_summarized_all [ percent_canopy <= 30.482525449494] [zoom < 15] [zoom > 12] {
+   polygon-fill: #66C2A4;
+}
+#utc_summarized_all [ percent_canopy <= 24.3489773245938] [zoom < 15] [zoom > 12] {
+   polygon-fill: #CCECE6;
+}
+#utc_summarized_all [ percent_canopy <= 21.2173996429018] [zoom < 15] [zoom > 12] {
+   polygon-fill: #D7FAF4;
+}
+#utc_summarized_all [ percent_canopy <= 18.0473166617331] [zoom < 15] [zoom > 12] {
+   polygon-fill: #EDF8FB;
+}
+
+// Now have everything disappear at zoom 13
+#utc_summarized_all
+[zoom >= 13]
+{
+  line-color: #FFF;
+  line-opacity: 0;
+  line-width: 0;
+  polygon-opacity: 0;
+}
