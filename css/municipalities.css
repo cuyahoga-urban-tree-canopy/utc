@@ -94,7 +94,7 @@
 }
 
 #utc_summarized_all
-[zoom = 14]
+[zoom >= 14]
 {
   line-color: #000;
   line-opacity: 1;
