@@ -4,4 +4,4 @@ SELECT cartodb_id , replace(municipa_4, ' ', E'\n') AS name, trtotpct AS percent
 
 UNION
 
-SELECT cartodb_id, replace(spa_name, ' ', E'\n')  AS name, trtotpct AS percent_canopy, the_geom_webmercator FROM utc_summarized_all WHERE "type" = 'ClevelandSPA'
+SELECT cartodb_id, replace(spa_name, ' ', E'\n')  AS name, trtotpct AS percent_canopy, the_geom_webmercator FROM utc_summarized_all WHERE "type" = 'SPA'
