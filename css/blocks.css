@@ -9,9 +9,9 @@
   polygon-opacity: 0.8;
 }
 
-// City/SPA color breakdown with zoom limits
+// Block color breakdown with zoom limits
 
-#utc_summarized_all [ percent_canopy <= 77.8453624973071 ] [zoom < 16] [zoom >= 14] {
+#utc_summarized_all [ percent_canopy <= 99.99 ] [zoom < 16] [zoom >= 14] {
    polygon-fill: #005824;
 }
 #utc_summarized_all [ percent_canopy <= 47.548148744051] [zoom < 15] [zoom >= 14] {
