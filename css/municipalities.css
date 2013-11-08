@@ -1,4 +1,5 @@
-/** Chloropleth for percent canopy.  Quantile with 7 categories */
+/** Chloropleth for percent canopy.  Quantile with 5 categories for
+Municipalities/SPAs */
 
 #utc_summarized_all
 [zoom < 13]
@@ -6,7 +7,7 @@
   line-color: #000;
   line-opacity: 1;
   line-width: 1;
-  polygon-opacity: 0.8;
+  polygon-opacity: 1;
 }
 
 // Display City labels
@@ -15,11 +16,10 @@
 [zoom > 10] [zoom < 12]
 {
   text-name: [name];
-  text-halo-fill: #FFF;
+  text-halo-fill: #CCCCCC;
   text-halo-radius: 1;
   text-face-name: 'DejaVu Sans Book';
   text-size: 7.5;
-
   text-fill: #50357a;
 }
 
@@ -27,7 +27,7 @@
 [zoom = 12]
 {
   text-name: [name];
-  text-halo-fill: #FFF;
+  text-halo-fill: #CCCCCC;
   text-halo-radius: 1;
   text-face-name: 'DejaVu Sans Book';
   text-size: 12;
@@ -39,7 +39,7 @@
 [zoom = 13]
 {
   text-name: [name];
-  text-halo-fill: #FFF;
+  text-halo-fill: #CCCCCC;
   text-halo-radius: 1;
   text-face-name: 'DejaVu Sans Book';
   text-size: 18;
@@ -50,37 +50,30 @@
 [zoom >= 14]
 {
   text-name: [name];
-  text-halo-fill: #FFF;
+  text-halo-fill: #CCCCCC;
   text-halo-radius: 1;
   text-face-name: 'DejaVu Sans Book';
   text-size: 24;
   text-fill: #50357a;
 }
 
-
-
 // City/SPA color breakdown with zoom limits
 
-#utc_summarized_all [ percent_canopy <= 77.8453624973071 ] [zoom < 13] {
-   polygon-fill: #005824;
+#utc_summarized_all [ percent_canopy <= 100 ] [zoom < 13] {
+   polygon-fill: #1E6823;
 }
-#utc_summarized_all [ percent_canopy <= 47.548148744051] [zoom < 13] {
-   polygon-fill: #238B45;
+#utc_summarized_all [ percent_canopy <= 38.62645982 ] [zoom < 13] {
+   polygon-fill: #44A340;
 }
-#utc_summarized_all [ percent_canopy <= 40.1953650306495] [zoom < 13] {
-   polygon-fill: #41AE76;
+#utc_summarized_all [ percent_canopy <= 27.30982715 ] [zoom < 13] {
+   polygon-fill: #8CC665;
 }
-#utc_summarized_all [ percent_canopy <= 30.482525449494] [zoom < 13] {
-   polygon-fill: #66C2A4;
+#utc_summarized_all [ percent_canopy <= 19.5260274] [zoom < 13] {
+   polygon-fill: #D6E685;
 }
-#utc_summarized_all [ percent_canopy <= 24.3489773245938] [zoom < 13] {
-   polygon-fill: #CCECE6;
-}
-#utc_summarized_all [ percent_canopy <= 21.2173996429018] [zoom < 13] {
-   polygon-fill: #D7FAF4;
-}
-#utc_summarized_all [ percent_canopy <= 18.0473166617331] [zoom < 13] {
-   polygon-fill: #EDF8FB;
+#utc_summarized_all [ percent_canopy <= 11.52966902
+] [zoom < 13] {
+   polygon-fill: #EEEEEE;
 }
 
 // Now have everything but lines disappear at zoom 13
