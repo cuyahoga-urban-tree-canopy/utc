@@ -1,0 +1,67 @@
+/** Chloropleth for percent canopy.  Quantile with 5 categories for
+Municipalities/SPAs */
+
+#utc_summarized_all
+[zoom < 12] [zoom > 9]
+{
+  line-color: #221d68;
+  line-opacity: 0.8;
+  line-width: 2;
+  line-dasharray: 10,10;
+  polygon-opacity: 1;
+}
+
+// Display Watershed labels
+
+#utc_summarized_all::labels
+[zoom = 11 ]
+{
+  text-name: [name];
+  text-halo-fill: #1E6823;
+  text-halo-radius: 1.5;
+  text-face-name: 'DejaVu Sans Book';
+  text-size: 12;
+  text-fill: #CCCCCC;
+}
+
+#utc_summarized_all::labels
+[zoom = 12 ]
+{
+  text-name: [name];
+  text-halo-fill: #1E6823;
+  text-halo-radius: 2;
+  text-face-name: 'DejaVu Sans Book';
+  text-size: 24;
+  text-fill: #CCCCCC;
+}
+
+// City/SPA color breakdown with zoom limits
+
+#utc_summarized_all [ percent_canopy <= 100 ] [zoom < 12] [zoom > 9] {
+   polygon-fill: #1E6823;
+}
+#utc_summarized_all [ percent_canopy <= 38.62645982 ] [zoom < 12] [zoom > 9] {
+   polygon-fill: #44A340;
+}
+#utc_summarized_all [ percent_canopy <= 27.30982715 ] [zoom < 12] [zoom > 9] {
+   polygon-fill: #8CC665;
+}
+#utc_summarized_all [ percent_canopy <= 19.5260274] [zoom < 12] [zoom > 9] {
+   polygon-fill: #D6E685;
+}
+#utc_summarized_all [ percent_canopy <= 11.52966902
+] [zoom < 12] [zoom > 9] {
+   polygon-fill: #EEEEEE;
+}
+
+// 
+
+#utc_summarized_all
+[zoom = 12]
+{
+  line-color: #221d68;
+  line-opacity: 0.8;
+  line-width: 2;
+  line-dasharray: 10,10;
+  polygon-opacity: 0;
+}
