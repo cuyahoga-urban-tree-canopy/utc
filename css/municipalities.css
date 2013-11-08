@@ -2,7 +2,7 @@
 Municipalities/SPAs */
 
 #utc_summarized_all
-[zoom < 13]
+[zoom < 13] [zoom > 11]
 {
   line-color: #000;
   line-opacity: 1;
@@ -13,7 +13,7 @@ Municipalities/SPAs */
 // Display City labels
 
 #utc_summarized_all::labels
-[zoom > 10] [zoom < 12]
+[zoom > 11] [zoom < 12]
 {
   text-name: [name];
   text-halo-fill: #CCCCCC;
@@ -59,20 +59,20 @@ Municipalities/SPAs */
 
 // City/SPA color breakdown with zoom limits
 
-#utc_summarized_all [ percent_canopy <= 100 ] [zoom < 13] {
+#utc_summarized_all [ percent_canopy <= 100 ] [zoom < 13] [zoom > 11] {
    polygon-fill: #1E6823;
 }
-#utc_summarized_all [ percent_canopy <= 38.62645982 ] [zoom < 13] {
+#utc_summarized_all [ percent_canopy <= 38.62645982 ] [zoom < 13] [zoom > 11] {
    polygon-fill: #44A340;
 }
-#utc_summarized_all [ percent_canopy <= 27.30982715 ] [zoom < 13] {
+#utc_summarized_all [ percent_canopy <= 27.30982715 ] [zoom < 13] [zoom > 11] {
    polygon-fill: #8CC665;
 }
-#utc_summarized_all [ percent_canopy <= 19.5260274] [zoom < 13] {
+#utc_summarized_all [ percent_canopy <= 19.5260274] [zoom < 13] [zoom > 11] {
    polygon-fill: #D6E685;
 }
 #utc_summarized_all [ percent_canopy <= 11.52966902
-] [zoom < 13] {
+] [zoom < 13] [zoom > 11] {
    polygon-fill: #EEEEEE;
 }
 
