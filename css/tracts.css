@@ -1,4 +1,4 @@
-/** Chloropleth for percent canopy.  Quantile with 7 categories for Tracts */
+/** Chloropleth for percent canopy.  Quantile with 7 categories */
 
 #utc_summarized_all
 [zoom < 14] [zoom > 12]
