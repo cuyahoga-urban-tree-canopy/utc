@@ -16,22 +16,22 @@ Municipalities/SPAs */
 [zoom > 11] [zoom < 12]
 {
   text-name: [name];
-  text-halo-fill: #CCCCCC;
-  text-halo-radius: 1;
+  text-halo-fill: #50357a;
+  text-halo-radius: 0.7;
   text-face-name: 'DejaVu Sans Book';
   text-size: 7.5;
-  text-fill: #50357a;
+  text-fill: #CCCCCC;
 }
 
 #utc_summarized_all::labels
 [zoom = 12]
 {
   text-name: [name];
-  text-halo-fill: #CCCCCC;
-  text-halo-radius: 1;
+  text-halo-fill: #50357a;
+  text-halo-radius: 0.7;
   text-face-name: 'DejaVu Sans Book';
   text-size: 12;
-  text-fill: #50357a;
+  text-fill: #CCCCCC;
 }
 
 
@@ -39,22 +39,22 @@ Municipalities/SPAs */
 [zoom = 13]
 {
   text-name: [name];
-  text-halo-fill: #CCCCCC;
-  text-halo-radius: 1;
+  text-halo-fill: #50357a;
+  text-halo-radius: 0.7;
   text-face-name: 'DejaVu Sans Book';
   text-size: 18;
-  text-fill: #50357a;
+  text-fill: #CCCCCC;
 }
 
 #utc_summarized_all::labels
 [zoom >= 14]
 {
   text-name: [name];
-  text-halo-fill: #CCCCCC;
-  text-halo-radius: 1;
+  text-halo-fill: #50357a;
+  text-halo-radius: 0.7;
   text-face-name: 'DejaVu Sans Book';
   text-size: 24;
-  text-fill: #50357a;
+  text-fill: #CCCCCC;
 }
 
 // City/SPA color breakdown with zoom limits
