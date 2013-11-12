@@ -1,5 +1,5 @@
 /** Chloropleth for percent canopy.  Quantile with 5 categories for
-Municipalities/SPAs */
+Watersheds */
 
 #utc_summarized_all
 [zoom < 12] [zoom > 9]
@@ -35,7 +35,7 @@ Municipalities/SPAs */
   text-fill: #CCCCCC;
 }
 
-// City/SPA color breakdown with zoom limits
+// Watershed breakdown with zoom limits
 
 #utc_summarized_all [ percent_canopy <= 100 ] [zoom < 12] [zoom > 9] {
    polygon-fill: #1E6823;
