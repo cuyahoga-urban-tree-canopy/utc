@@ -3,26 +3,27 @@
 #utc_summarized_all
 [zoom < 14] [zoom > 12]
 {
-  line-color: #FFF;
+  line-color: #555;
   line-opacity: 1;
   line-width: 1;
-  polygon-opacity: 1;
+  polygon-opacity: 0.8;
 }
 
 // Display Tract labels between zoom 10 and 13
-/*
+
 #utc_summarized_all::labels
-[zoom = 14]
+[zoom < 15] [zoom > 13] 
 {
   text-name: [name];
   text-halo-fill: #FFF;
-  text-halo-radius: 1;
+  text-halo-radius: 0;
   text-face-name: 'DejaVu Sans Book';
   text-size: 12;
   text-allow-overlap: false;
-  text-fill: #000;
+  text-fill: #555;
+  text-comp-op: difference;  
 }
-*/
+
 
 // Tract color breakdown with zoom limits
 
@@ -46,8 +47,8 @@
 #utc_summarized_all
 [zoom >= 13]
 {
-  line-color: #FFF;
-  line-opacity: 0;
-  line-width: 0;
+  line-color: #222;
+  line-opacity: 1;
+  line-width: 1;
   polygon-opacity: 0;
 }
