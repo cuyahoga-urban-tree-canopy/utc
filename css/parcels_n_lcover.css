@@ -43,6 +43,6 @@ Map {
    polygon-opacity: 0.5;
 }
 
-#utc [zoom > 16] {
+#landcover10class2011 [zoom > 16] {
   raster-opacity:1;
 }
