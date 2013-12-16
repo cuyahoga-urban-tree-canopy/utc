@@ -1,3 +1,4 @@
-// Selects just municipalities
-
-SELECT cartodb_id , replace(name, ' ', E'\n') AS name, trtotpct AS percent_canopy, the_geom_webmercator FROM utc_summarized_all WHERE type = 'Municipality';
+SELECT cartodb_id, extcpctall AS percent_canopy, 
+	replace(name, ' ', E'\n') AS name,
+  	the_geom_webmercator
+    FROM city_spa
