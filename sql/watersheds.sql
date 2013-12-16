@@ -1,3 +1,1 @@
-// Selecting just the watershed boundaries
-
-SELECT cartodb_id , replace(name, ' ', E'\n') AS name, trtotpct AS percent_canopy, the_geom_webmercator FROM utc_summarized_all WHERE type = 'Watershed'
+SELECT cartodb_id, extcpctall, (regexp_split_to_array(name, E'\\|'))[1] AS name, the_geom_webmercator FROM utc_watersheds
