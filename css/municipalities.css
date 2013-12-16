@@ -1,7 +1,7 @@
 /** Chloropleth for percent canopy.  Quantile with 5 categories for
 Municipalities/SPAs */
 
-#utc_summarized_all
+#city_spa
 [zoom < 13] [zoom > 11]
 {
   line-color: #000;
@@ -12,7 +12,7 @@ Municipalities/SPAs */
 
 // Display City labels
 
-#utc_summarized_all::labels
+#city_spa::labels
 [zoom = 12]
 {
   text-name: [name];
@@ -26,7 +26,7 @@ Municipalities/SPAs */
 }
 
 
-#utc_summarized_all::labels
+#city_spa::labels
 [zoom = 13]
 {
   text-name: [name];
@@ -39,7 +39,7 @@ Municipalities/SPAs */
   text-comp-op: multiply;  
 }
 
-#utc_summarized_all::labels
+#city_spa::labels
 [zoom = 14]
 {
   text-name: [name];
@@ -54,25 +54,25 @@ Municipalities/SPAs */
 
 // City/SPA color breakdown with zoom limits
 
-#utc_summarized_all [ percent_canopy <= 100 ] [zoom < 13] [zoom > 11] {
+#city_spa [ percent_canopy <= 1.00 ] [zoom < 13] [zoom > 11] {
    polygon-fill: #1E6823;
 }
-#utc_summarized_all [ percent_canopy <= 38.62645982 ] [zoom < 13] [zoom > 11] {
+#city_spa [ percent_canopy <= 0.3862645982 ] [zoom < 13] [zoom > 11] {
    polygon-fill: #44A340;
 }
-#utc_summarized_all [ percent_canopy <= 27.30982715 ] [zoom < 13] [zoom > 11] {
+#city_spa [ percent_canopy <= 0.2730982715 ] [zoom < 13] [zoom > 11] {
    polygon-fill: #8CC665;
 }
-#utc_summarized_all [ percent_canopy <= 19.5260274] [zoom < 13] [zoom > 11] {
+#city_spa [ percent_canopy <= 0.195260274] [zoom < 13] [zoom > 11] {
    polygon-fill: #D6E685;
 }
-#utc_summarized_all [ percent_canopy <= 11.52966902
+#city_spa [ percent_canopy <= 0.1152966902
 ] [zoom < 13] [zoom > 11] {
    polygon-fill: #EEEEEE;
 }
 
 // Now have everything but lines disappear at zoom 13
-#utc_summarized_all
+#city_spa
 [zoom = 13]
 {
   line-color: #000;
@@ -81,7 +81,7 @@ Municipalities/SPAs */
   polygon-opacity: 0;
 }
 
-#utc_summarized_all
+#city_spa
 [zoom >= 14]
 {
   line-color: #000;
