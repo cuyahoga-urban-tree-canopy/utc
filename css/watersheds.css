@@ -1,7 +1,7 @@
 /** Chloropleth for percent canopy.  Quantile with 5 categories for
 Watersheds */
 
-#utc_summarized_all
+#utc_watersheds
 [zoom < 12] [zoom > 9]
 {
   line-color: #221d68;
@@ -13,7 +13,7 @@ Watersheds */
 
 // Display Watershed labels
 
-#utc_summarized_all::labels
+#utc_watersheds::labels
 [zoom = 11 ]
 {
   text-name: [name];
@@ -24,7 +24,7 @@ Watersheds */
   text-fill: #CCCCCC;
 }
 
-#utc_summarized_all::labels
+#utc_watersheds::labels
 [zoom = 12 ]
 {
   text-name: [name];
@@ -37,26 +37,26 @@ Watersheds */
 
 // Watershed breakdown with zoom limits
 
-#utc_summarized_all [ percent_canopy <= 100 ] [zoom < 12] [zoom > 9] {
+#utc_watersheds [ percent_canopy <= 1 ] [zoom < 12] [zoom > 9] {
    polygon-fill: #1E6823;
 }
-#utc_summarized_all [ percent_canopy <= 38.62645982 ] [zoom < 12] [zoom > 9] {
+#utc_watersheds [ percent_canopy <= 0.3862645982 ] [zoom < 12] [zoom > 9] {
    polygon-fill: #44A340;
 }
-#utc_summarized_all [ percent_canopy <= 27.30982715 ] [zoom < 12] [zoom > 9] {
+#utc_watersheds [ percent_canopy <= 0.2730982715 ] [zoom < 12] [zoom > 9] {
    polygon-fill: #8CC665;
 }
-#utc_summarized_all [ percent_canopy <= 19.5260274] [zoom < 12] [zoom > 9] {
+#utc_watersheds [ percent_canopy <= 0.195260274] [zoom < 12] [zoom > 9] {
    polygon-fill: #D6E685;
 }
-#utc_summarized_all [ percent_canopy <= 11.52966902
+#utc_watersheds [ percent_canopy <= 0.1152966902
 ] [zoom < 12] [zoom > 9] {
    polygon-fill: #EEEEEE;
 }
 
 // 
 
-#utc_summarized_all
+#utc_watersheds
 [zoom = 12]
 {
   line-color: #666666;
