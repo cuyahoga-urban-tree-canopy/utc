@@ -1,6 +1,6 @@
 /** Chloropleth for percent canopy.  Quantile with 7 categories for blocks */
 
-#utc_summarized_all
+#blocks
 [zoom < 16] [zoom >= 14]
 {
   line-color: #FFF;
@@ -11,7 +11,7 @@
 
 // Display Tract labels between zoom 10 and 13
 
-#utc_summarized_all::labels
+#blocks::labels
 [zoom = 15]
 {
   text-name: [name];
@@ -26,20 +26,18 @@
 
 // Block color breakdown with zoom limits
 
-#utc_summarized_all [ percent_canopy <= 100 ] [zoom >= 14] [zoom < 16] {
+#blocks [ percent_canopy <= 1.00 ] [zoom >= 14] [zoom < 16] {
    polygon-fill: #1E6823;
 }
-#utc_summarized_all [ percent_canopy <= 43.3471891 ] [zoom >= 14] [zoom < 16] {
+#blocks [ percent_canopy <= 0.433471891 ] [zoom >= 14] [zoom < 16] {
    polygon-fill: #44A340;
 }
-#utc_summarized_all [ percent_canopy <= 33.00124778 ] [zoom >= 14] [zoom < 16] {
+#blocks [ percent_canopy <= 0.3300124778 ] [zoom >= 14] [zoom < 16] {
    polygon-fill: #8CC665;
 }
-#utc_summarized_all [ percent_canopy <= 24.03415037 ] [zoom >= 14] [zoom < 16] {
+#blocks [ percent_canopy <= 0.2403415037 ] [zoom >= 14] [zoom < 16] {
    polygon-fill: #D6E685;
 }
-#utc_summarized_all [ percent_canopy <= 19.25558837 ] [zoom >= 14] [zoom < 16] {
+#blocks [ percent_canopy <= 0.1925558837 ] [zoom >= 14] [zoom < 16] {
    polygon-fill: #EEEEEE;
 }
-
-
