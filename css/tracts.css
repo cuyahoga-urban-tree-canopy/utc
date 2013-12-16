@@ -1,6 +1,6 @@
 /** Chloropleth for percent canopy.  Quantile with 7 categories */
 
-#utc_summarized_all
+#tracts
 [zoom < 14] [zoom > 12]
 {
   line-color: #555;
@@ -11,7 +11,7 @@
 
 // Display Tract labels between zoom 10 and 13
 
-#utc_summarized_all::labels
+#tracts::labels
 [zoom < 15] [zoom > 13] 
 {
   text-name: [name];
@@ -27,24 +27,24 @@
 
 // Tract color breakdown with zoom limits
 
-#utc_summarized_all [ percent_canopy <= 100 ] [zoom < 14] [zoom > 12] {
+#tracts [ percent_canopy <= 1.00 ] [zoom < 14] [zoom > 12] {
    polygon-fill: #1E6823;
 }
-#utc_summarized_all [ percent_canopy <= 43.3471891 ] [zoom < 14] [zoom > 12] {
+#tracts [ percent_canopy <= .433471891 ] [zoom < 14] [zoom > 12] {
    polygon-fill: #44A340;
 }
-#utc_summarized_all [ percent_canopy <= 33.00124778 ] [zoom < 14] [zoom > 12] {
+#tracts [ percent_canopy <= .3300124778 ] [zoom < 14] [zoom > 12] {
    polygon-fill: #8CC665;
 }
-#utc_summarized_all [ percent_canopy <= 24.03415037 ] [zoom < 14] [zoom > 12] {
+#tracts [ percent_canopy <= .2403415037 ] [zoom < 14] [zoom > 12] {
    polygon-fill: #D6E685;
 }
-#utc_summarized_all [ percent_canopy <= 19.25558837 ] [zoom < 14] [zoom > 12] {
+#tracts [ percent_canopy <= .1925558837 ] [zoom < 14] [zoom > 12] {
    polygon-fill: #EEEEEE;
 }
 
 // Now have everything disappear at zoom 13
-#utc_summarized_all
+#tracts
 [zoom >= 13]
 {
   line-color: #222;
