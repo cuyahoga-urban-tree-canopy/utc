@@ -1,4 +1,4 @@
-/** Chloropleth for percent canopy.  Quantile with 7 categories for blocks */
+/** Chloropleth for percent canopy.  Quantile with 5 categories for blocks */
 
 #blocks
 [zoom < 16] [zoom >= 14]
