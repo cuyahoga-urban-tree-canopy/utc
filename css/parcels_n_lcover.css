@@ -16,7 +16,7 @@ Map {
   line-color: #000;
   line-opacity: 1;
   line-width: 1;
-  line-dasharray: 1, 4, 2;
+//  line-dasharray: 1, 4, 2;
   polygon-opacity: 0;
 }
 
@@ -45,4 +45,9 @@ Map {
 
 #landcover10class2011 [zoom > 16] {
   raster-opacity:1;
+}
+
+#county {
+  line-color:#594;
+  line-width:1;
 }
