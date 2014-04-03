@@ -80,7 +80,7 @@ errorTileUrl: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcStyzXdR5V4U
         }).on('error', function() {
           cartodb.log.log("some error occurred");
         })
-         .setZIndex(-500);
+         .setZIndex(500);
 
         L.tileLayer('http://{s}.tile.stamen.com/toner-labels/{z}/{x}/{y}.png', {
           attribution: 'Stamen',
