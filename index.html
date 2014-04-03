@@ -38,7 +38,7 @@
 		  maxZoom: 15,
 		  errorTileUrl: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcStyzXdR5V4U_BF_DOOBAl3eEJGeNw54O40_Gxj5nXRMc-49Ega0A'
         }).addTo(map)
-        	.setZIndex(1);
+        	.setZIndex(0);
 		
         L.tileLayer('http://maps.cuyahogacounty.us/arcgis/rest/services/PLAN_TILED/Cuyahoga_LandCover_2011_CPC/MapServer/WMTS/tile/1.0.0/PLAN_TILED_Cuyahoga_LandCover_2011_CPC/default/GoogleMapsCompatible/{z}/{y}/{x}', {
           attribution: 'Prepared by The Cuyahoga County Planning Commission and Cleveland Metroparks',
@@ -46,7 +46,7 @@
 		  maxZoom: 18,		  
 		  errorTileUrl: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcStyzXdR5V4U_BF_DOOBAl3eEJGeNw54O40_Gxj5nXRMc-49Ega0A'
         }).addTo(map)
-        	.setZIndex(2);
+        	.setZIndex(200);
 
         L.tileLayer('http://maps.cuyahogacounty.us/arcgis/rest/services/PLAN_TILED/UTC_Parcel_Only/MapServer/WMTS/tile/1.0.0/PLAN_TILED_UTC_Parcel_Only/default/GoogleMapsCompatible/{z}/{y}/{x}', {
           attribution: 'Prepared by The Cuyahoga County Planning Commission and Cleveland Metroparks',
@@ -54,7 +54,7 @@
 		  maxZoom: 18,		  
 		  errorTileUrl: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcStyzXdR5V4U_BF_DOOBAl3eEJGeNw54O40_Gxj5nXRMc-49Ega0A'
         }).addTo(map)
-        	.setZIndex(3);
+        	.setZIndex(300);
 		  
         L.tileLayer('http://maps.cuyahogacounty.us/arcgis/rest/services/PLAN_TILED/UTC_Parcel_Existing/MapServer/WMTS/tile/1.0.0/PLAN_TILED_Cuyahoga_LandCover_2011_CPC/default/GoogleMapsCompatible/{z}/{y}/{x}', {
           attribution: 'Prepared by The Cuyahoga County Planning Commission and Cleveland Metroparks',
@@ -62,7 +62,7 @@
 		  maxZoom: 16,		  
 		  errorTileUrl: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcStyzXdR5V4U_BF_DOOBAl3eEJGeNw54O40_Gxj5nXRMc-49Ega0A'
         }).addTo(map)
-               	.setZIndex(4);
+               	.setZIndex(400);
 		
         cartodb.createLayer(map, 'http://cleveland-metroparks.cartodb.com/api/v2/viz/05af5a7c-668d-11e3-8914-cb7f69afe66f/viz.json')
          .addTo(map)
@@ -80,13 +80,13 @@
         }).on('error', function() {
           cartodb.log.log("some error occurred");
         })
-        	.setZIndex(5);
+        	.setZIndex(500);
 
         L.tileLayer('http://{s}.tile.stamen.com/toner-labels/{z}/{x}/{y}.png', {
           attribution: 'Stamen',
 		  maxZoom: 18
         }).addTo(map)
-		.bringToFront();
+               	.setZIndex(600);
       }
 
       window.onload = main;
