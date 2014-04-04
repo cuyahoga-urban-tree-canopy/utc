@@ -32,7 +32,72 @@
           zoom: 11,
         });
 
-map.locate({setView: true, maxZoom: 18});
+	map.locate({setView: true, maxZoom: 18});
+
+        L.tileLayer('http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png', {
+          attribution: 'Stamen',
+		maxZoom: 15,
+errorTileUrl: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcStyzXdR5V4U_BF_DOOBAl3eEJGeNw54O40_Gxj5nXRMc-49Ega0A'
+        }).addTo(map)
+         .setZIndex(0);
+
+        L.tileLayer('http://maps.cuyahogacounty.us/arcgis/rest/services/PLAN_TILED/Cuyahoga_LandCover_2011_CPC/MapServer/WMTS/tile/1.0.0/PLAN_TILED_Cuyahoga_LandCover_2011_CPC/default/GoogleMapsCompatible/{z}/{y}/{x}', {
+          attribution: 'Prepared by The Cuyahoga County Planning Commission and Cleveland Metroparks',
+		minZoom: 17,
+		maxZoom: 18,	
+errorTileUrl: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcStyzXdR5V4U_BF_DOOBAl3eEJGeNw54O40_Gxj5nXRMc-49Ega0A'
+        }).addTo(map)
+         .setZIndex(200);
+
+        L.tileLayer('http://maps.cuyahogacounty.us/arcgis/rest/services/PLAN_TILED/UTC_Parcel_Only/MapServer/WMTS/tile/1.0.0/PLAN_TILED_UTC_Parcel_Only/default/GoogleMapsCompatible/{z}/{y}/{x}', {
+          attribution: 'Prepared by The Cuyahoga County Planning Commission and Cleveland Metroparks',
+		minZoom: 17,
+		maxZoom: 18,	
+errorTileUrl: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcStyzXdR5V4U_BF_DOOBAl3eEJGeNw54O40_Gxj5nXRMc-49Ega0A'
+        }).addTo(map)
+         .setZIndex(300);
+
+        L.tileLayer('http://maps.cuyahogacounty.us/arcgis/rest/services/PLAN_TILED/UTC_Parcel_Existing/MapServer/WMTS/tile/1.0.0/PLAN_TILED_Cuyahoga_LandCover_2011_CPC/default/GoogleMapsCompatible/{z}/{y}/{x}', {
+          attribution: 'Prepared by The Cuyahoga County Planning Commission and Cleveland Metroparks',
+		minZoom: 16,
+		maxZoom: 16,	
+errorTileUrl: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcStyzXdR5V4U_BF_DOOBAl3eEJGeNw54O40_Gxj5nXRMc-49Ega0A'
+        }).addTo(map)
+                .setZIndex(400);
+
+        cartodb.createLayer(map, 'http://cleveland-metroparks.cartodb.com/api/v2/viz/05af5a7c-668d-11e3-8914-cb7f69afe66f/viz.json')
+         .addTo(map)
+         .on('done', function(layer) {
+
+          layer.setInteraction(true);
+
+          layer.on('featureOver', function(e, pos, latlng, data) {
+            cartodb.log.log(e, pos, latlng, data);
+          });
+
+          layer.on('error', function(err) {
+            cartodb.log.log('error: ' + err);
+          });
+        }).on('error', function() {
+          cartodb.log.log("some error occurred");
+        })
+         .setZIndex(500);
+
+        L.tileLayer('http://{s}.tile.stamen.com/toner-labels/{z}/{x}/{y}.png', {
+          attribution: 'Stamen',
+	maxZoom: 18
+        }).addTo(map)
+                .setZIndex(600);
+      }
+
+      function main() {
+        var map = new L.Map('map2', {
+          zoomControl: true,
+          center: [41.460, -81.67],
+          zoom: 11,
+        });
+
+	map.locate({setView: true, maxZoom: 18});
 
         L.tileLayer('http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png', {
           attribution: 'Stamen',
@@ -91,6 +156,10 @@ errorTileUrl: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcStyzXdR5V4U
       }
 
       window.onload = main;
+
+      map1.sync(map2);
+      map2.sync(map1);
+
     </script>
   </body>
 </html>
