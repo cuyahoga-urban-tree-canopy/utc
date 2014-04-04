@@ -25,7 +25,7 @@
     <script src="js/cartodb.js"></script>
 
     <script>
-      function main() {
+//      function main() { 
         var map1 = new L.Map('map1', {
           zoomControl: true,
           center: [41.460, -81.67],
@@ -93,16 +93,16 @@ errorTileUrl: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcStyzXdR5V4U
         }).addTo(map)
                 .setZIndex(600);
                 
-        var map2 = L.map('map2', {
+/*        var map2 = L.map('map2', {
             layers: [layer2],
             center: center,
             zoom: 14,
             zoomControl: false
         });
-                
-      }
+*/                
+//      }
 
-      window.onload = main;
+//      window.onload = main;
 
       map1.sync(map2);
       map2.sync(map1);
