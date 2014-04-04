@@ -32,7 +32,7 @@
           zoom: 11,
         });
 
-map.locate({setView: true, maxZoom: 18});
+map1.locate({setView: true, maxZoom: 18});
 
         L.tileLayer('http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png', {
           attribution: 'Stamen',
@@ -65,7 +65,7 @@ errorTileUrl: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcStyzXdR5V4U
         }).addTo(map1)
                 .setZIndex(400);
 
-        cartodb.createLayer(map, 'http://cleveland-metroparks.cartodb.com/api/v2/viz/05af5a7c-668d-11e3-8914-cb7f69afe66f/viz.json')
+        cartodb.createLayer(map1, 'http://cleveland-metroparks.cartodb.com/api/v2/viz/05af5a7c-668d-11e3-8914-cb7f69afe66f/viz.json')
          .addTo(map1)
          .on('done', function(layer) {
 
