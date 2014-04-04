@@ -26,13 +26,13 @@
 
     <script>
       function main() {
-        var map = new L.Map('map1', {
+        var map1 = new L.Map('map1', {
           zoomControl: true,
           center: [41.460, -81.67],
           zoom: 11
         });
 
-	map.locate({setView: true, maxZoom: 18});
+	map1.locate({setView: true, maxZoom: 18});
 
         L.tileLayer('http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png', {
           attribution: 'Stamen',
@@ -88,6 +88,14 @@ errorTileUrl: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcStyzXdR5V4U
 	maxZoom: 18
         }).addTo(map)
                 .setZIndex(600);
+                
+        var map2 = L.map('map2', {
+            layers: [layer2],
+            center: center,
+            zoom: 14,
+            zoomControl: false
+        });
+                
       }
 
       window.onload = main;
