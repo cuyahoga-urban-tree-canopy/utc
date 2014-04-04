@@ -25,46 +25,42 @@
     <script src="js/cartodb.js"></script>
 
     <script>
-//      function main() { 
-        var map1 = new L.Map('map1', {
+      function main() {
+        var map = new L.Map('map1', {
           zoomControl: true,
           center: [41.460, -81.67],
-          zoom: 11
+          zoom: 11,
         });
 
-        var layer2 = L.tileLayer('http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=topo2&zoom={z}&x={x}&y={y}', {
-            attribution: '© Kartverket'
-        });
-
-	map1.locate({setView: true, maxZoom: 18});
+map.locate({setView: true, maxZoom: 18});
 
         L.tileLayer('http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png', {
           attribution: 'Stamen',
-		maxZoom: 15,
+maxZoom: 15,
 errorTileUrl: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcStyzXdR5V4U_BF_DOOBAl3eEJGeNw54O40_Gxj5nXRMc-49Ega0A'
         }).addTo(map)
          .setZIndex(0);
 
         L.tileLayer('http://maps.cuyahogacounty.us/arcgis/rest/services/PLAN_TILED/Cuyahoga_LandCover_2011_CPC/MapServer/WMTS/tile/1.0.0/PLAN_TILED_Cuyahoga_LandCover_2011_CPC/default/GoogleMapsCompatible/{z}/{y}/{x}', {
           attribution: 'Prepared by The Cuyahoga County Planning Commission and Cleveland Metroparks',
-		minZoom: 17,
-		maxZoom: 18,	
+minZoom: 17,
+maxZoom: 18,	
 errorTileUrl: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcStyzXdR5V4U_BF_DOOBAl3eEJGeNw54O40_Gxj5nXRMc-49Ega0A'
         }).addTo(map)
          .setZIndex(200);
 
         L.tileLayer('http://maps.cuyahogacounty.us/arcgis/rest/services/PLAN_TILED/UTC_Parcel_Only/MapServer/WMTS/tile/1.0.0/PLAN_TILED_UTC_Parcel_Only/default/GoogleMapsCompatible/{z}/{y}/{x}', {
           attribution: 'Prepared by The Cuyahoga County Planning Commission and Cleveland Metroparks',
-		minZoom: 17,
-		maxZoom: 18,	
+minZoom: 17,
+maxZoom: 18,	
 errorTileUrl: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcStyzXdR5V4U_BF_DOOBAl3eEJGeNw54O40_Gxj5nXRMc-49Ega0A'
         }).addTo(map)
          .setZIndex(300);
 
         L.tileLayer('http://maps.cuyahogacounty.us/arcgis/rest/services/PLAN_TILED/UTC_Parcel_Existing/MapServer/WMTS/tile/1.0.0/PLAN_TILED_Cuyahoga_LandCover_2011_CPC/default/GoogleMapsCompatible/{z}/{y}/{x}', {
           attribution: 'Prepared by The Cuyahoga County Planning Commission and Cleveland Metroparks',
-		minZoom: 16,
-		maxZoom: 16,	
+minZoom: 16,
+maxZoom: 16,	
 errorTileUrl: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcStyzXdR5V4U_BF_DOOBAl3eEJGeNw54O40_Gxj5nXRMc-49Ega0A'
         }).addTo(map)
                 .setZIndex(400);
@@ -89,24 +85,12 @@ errorTileUrl: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcStyzXdR5V4U
 
         L.tileLayer('http://{s}.tile.stamen.com/toner-labels/{z}/{x}/{y}.png', {
           attribution: 'Stamen',
-	maxZoom: 18
+maxZoom: 18
         }).addTo(map)
                 .setZIndex(600);
-                
-/*        var map2 = L.map('map2', {
-            layers: [layer2],
-            center: center,
-            zoom: 14,
-            zoomControl: false
-        });
-*/                
-//      }
+      }
 
-//      window.onload = main;
-
-      map1.sync(map2);
-      map2.sync(map1);
-
+      window.onload = main;
     </script>
   </body>
 </html>
