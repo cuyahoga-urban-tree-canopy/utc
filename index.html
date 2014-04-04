@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/cartodb.css" />
   </head>
   <body>
-    <!-- <div id="map"></div> -->
+    <!-- <div id="map1 and map2"></div> -->
     
     <div id="map1"></div>
     <div id="map2"></div>
@@ -32,7 +32,7 @@
           zoom: 11,
         });
 
-map.locate({setView: true, maxZoom: 18});
+        map1.locate({setView: true, maxZoom: 18});
 
         L.tileLayer('http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png', {
           attribution: 'Stamen',
