@@ -32,6 +32,10 @@
           zoom: 11
         });
 
+        var layer2 = L.tileLayer('http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=topo2&zoom={z}&x={x}&y={y}', {
+            attribution: '© Kartverket'
+        });
+
 	map1.locate({setView: true, maxZoom: 18});
 
         L.tileLayer('http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png', {
