@@ -7,9 +7,10 @@
     <link rel="shortcut icon" href="http://cartodb.com/assets/favicon.ico" />
     <style type="text/css">
         html, body { width: 100%; height: 100%; margin: 0; }
-        #map1, #map2 { width: 49.5%; height: 100%; }
-        #map1 { float: left; }
-        #map2 { float: right; }
+        #map1 { width: 61.3%; height: 100%; }
+        #map2 { width: 37.7%; height: 100%; }
+        #map1 { float: right; }
+        #map2 { float: left; }
     </style>
     <link rel="stylesheet" href="css/cartodb.css" />
   </head>
@@ -96,7 +97,7 @@
             layers: [layer2],
             center: [41.460, -81.67],
             zoom: 11,
-            zoomControl: true
+            zoomControl: false
         });
 
         map1.sync(map2);
