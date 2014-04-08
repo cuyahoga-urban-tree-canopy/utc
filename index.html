@@ -12,11 +12,7 @@
         #map { float: right; }
         #map2 { float: left; }
     </style>
-    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.css" />
-    <!--[if lte IE 8]>
-<link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.ie.css" />
-<![endif]-->
-
+    <link rel="stylesheet" href="css/cartodb.css" />
   </head>
   <body>
     <!-- <div id="map"></div> -->
@@ -27,7 +23,7 @@
     <script src="js/L.Map.Sync.js"></script>
     
     <!-- include cartodb.js library -->
-    <script src="http://libs.cartocdn.com/cartodb.js/v3/cartodb.js"></script>
+    <script src="js/cartodb.js"></script>
 
     <script>
  function main() {
@@ -106,7 +102,7 @@
 
 
         map.sync(map2);
-        map2.sync(map);        
+        map2.sync(map);
 
 
  }
