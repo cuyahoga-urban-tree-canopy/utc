@@ -28,7 +28,7 @@
     <script src="http://libs.cartocdn.com/cartodb.js/v3/cartodb.js"></script>
 
     <script>
- function main() {
+
         var map = new L.Map('map', {
           zoomControl: true,
           center: [41.460, -81.67],
@@ -105,9 +105,6 @@
 
         map.sync(map2);
         map2.sync(map);
-
-
- }
 
  window.onload = main;
     </script>
