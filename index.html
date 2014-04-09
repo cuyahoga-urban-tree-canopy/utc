@@ -17,8 +17,13 @@
     </style>
     <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.css" />
     <!--[if lte IE 8]>
-<link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.ie.css" />
-<![endif]-->
+      <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.ie.css" />
+    <![endif]-->
+
+    <link rel="stylesheet" href="http://heyman.github.io/leaflet-usermarker/src/leaflet.usermarker.css" />
+    
+    <script src="http://heyman.github.io/leaflet-usermarker/src/leaflet.usermarker.js"></script>    
+
   </head>
   <body>
     <!-- <div id="map"></div> -->
@@ -36,7 +41,19 @@
           zoom: 11
         });
 
-        map.locate({setView: true, maxZoom: 18});
+        map.on("locationfound", function(location) {
+            if (!marker)
+                marker = L.userMarker(location.latlng).addTo(map);
+        
+            marker.setLatLng(location.latlng);
+            marker.setAccuracy(location.accuracy);
+        });
+        map.locate({
+            watch: false,
+            locate: true,
+            setView: true,
+            enableHighAccuracy: true
+        });
 
         L.tileLayer('http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png', {
           attribution: 'Stamen',
