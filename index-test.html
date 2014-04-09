@@ -42,22 +42,22 @@
           attribution: 'Stamen',
           maxZoom: 15,
           errorTileUrl: 'http://fashiontech.files.wordpress.com/2008/08/plaid_b_single.jpg?w=256'
-        }),
-//         .setZIndex(0);
+        })
+         .setZIndex(0),
 
         row = L.tileLayer('http://maps.cuyahogacounty.us/arcgis/rest/services/PLAN_TILED/UTC_ROW_Existing/MapServer/WMTS/tile/1.0.0/PLAN_TILED_UTC_ROW_Existing/{default/GoogleMapsCompatible/{z}/{y}/{x}', {
           attribution: 'Prepared by The Cuyahoga County Planning Commission and Cleveland Metroparks',
           minZoom: 16,
           maxZoom: 16,	
           errorTileUrl: 'http://fashiontech.files.wordpress.com/2008/08/plaid_b_single.jpg?w=256'
-        }),
-//         .setZIndex(500);
+        })
+         .setZIndex(500),
 
         labels = L.tileLayer('http://{s}.tile.stamen.com/toner-labels/{z}/{x}/{y}.png', {
           attribution: 'Stamen',
           maxZoom: 18
-        });
-//                .setZIndex(600);
+        })
+                .setZIndex(600);
 
         var existing = L.layerGroup([background, row, labels]);
 
