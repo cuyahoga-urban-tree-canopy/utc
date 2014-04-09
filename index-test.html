@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cuyahoga County Urban Tree Canopy Study</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <link rel="shortcut icon" href="http://maps.cmparks.net/geoserver/www/favicon.ico" />
+    <style type="text/css">
+        html, body { width: 100%; height: 100%; margin: 0;
+            background-color: #000000;
+        }
+        #map { width: 100%; height: 95%; }
+        #map { float: right; }
+        #footer { width: 100%; height: 5%;
+          background-color: #000000;
+        }
+    </style>
+    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.css" />
+    <!--[if lte IE 8]>
+<link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.ie.css" />
+<![endif]-->
+  </head>
+  <body>
+    <!-- <div id="map"></div> -->
+    <div id="map"></div>
+    <div id="footer"></div>
+    
+    <!-- include cartodb.js library -->
+    <script src="http://libs.cartocdn.com/cartodb.js/v3/cartodb.js"></script>
+
+    <script>
+
+        var map = new L.Map('map', {
+          zoomControl: true,
+          center: [41.460, -81.67],
+          zoom: 11
+        });
+
+        map.locate({setView: true, maxZoom: 18});
+
+        var background = L.tileLayer('http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png', {
+          attribution: 'Stamen',
+          maxZoom: 15,
+          errorTileUrl: 'http://fashiontech.files.wordpress.com/2008/08/plaid_b_single.jpg?w=256'
+        }),
+//         .setZIndex(0);
+
+        row = L.tileLayer('http://maps.cuyahogacounty.us/arcgis/rest/services/PLAN_TILED/UTC_ROW_Existing/MapServer/WMTS/tile/1.0.0/PLAN_TILED_UTC_ROW_Existing/{default/GoogleMapsCompatible/{z}/{y}/{x}', {
+          attribution: 'Prepared by The Cuyahoga County Planning Commission and Cleveland Metroparks',
+          minZoom: 16,
+          maxZoom: 16,	
+          errorTileUrl: 'http://fashiontech.files.wordpress.com/2008/08/plaid_b_single.jpg?w=256'
+        }),
+//         .setZIndex(500);
+
+        labels = L.tileLayer('http://{s}.tile.stamen.com/toner-labels/{z}/{x}/{y}.png', {
+          attribution: 'Stamen',
+          maxZoom: 18
+        });
+//                .setZIndex(600);
+
+        var existing = L.layerGroup([background, row, labels]);
+
+        var baseLayers = {
+        	"Existing": existing
+        };
+        
+        L.control.layers(baseLayers).addTo(map);
+
+    </script>
+  </body>
+</html>
