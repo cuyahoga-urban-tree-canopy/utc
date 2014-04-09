@@ -1,3 +1,4 @@
+
   /**
    *  CartoDB infowindow dark styles
    */
@@ -85,11 +86,11 @@
 
   div.cartodb-popup div.cartodb-popup-content {
     display:block;
-    width:600px;
-    max-width: 600px;
+    width:190px;
+    max-width: 190px;
     min-height:5px;
     height:auto;
-    max-height:600px;
+    max-height:185px;
     margin: 0;
     padding: 0;
     overflow-y: auto;
