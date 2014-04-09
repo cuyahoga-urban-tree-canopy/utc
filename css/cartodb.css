@@ -77,7 +77,7 @@
   div.cartodb-popup div.cartodb-popup-content-wrapper {
     position:relative;
     width:190px;
-    max-width: 300px;
+    max-width: 190px;
     padding:12px 19px 12px 19px;
     overflow-x: hidden;
     background:url('../img/light.png') repeat-y -452px 0;
@@ -85,11 +85,11 @@
 
   div.cartodb-popup div.cartodb-popup-content {
     display:block;
-    width:190px;
-    max-width: 190px;
+    width:300px;
+    max-width: 300px;
     min-height:5px;
     height:auto;
-    max-height:185px;
+    max-height:300px;
     margin: 0;
     padding: 0;
     overflow-y: auto;
