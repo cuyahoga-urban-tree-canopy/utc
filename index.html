@@ -9,95 +9,108 @@
         html, body { width: 100%; height: 100%; margin: 0;
             background-color: #2d4f2f;
         }
-        #map { width: 100%; height: 95%; }
-        #map { float: right; }
-        #footer { width: 100%; height: 5%;  }
+        #map { width: 100%; height: 100%; }
     </style>
     <link rel="stylesheet" href="css/cartodb.css" />
     <!--[if lte IE 8]>
 <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.ie.css" />
 <![endif]-->
   </head>
-  <body>
+  <body class="impress-not-supported">
     <!-- <div id="map"></div> -->
-    <div id="map"></div>
-    <div id="footer"></div>
-    
-    <!-- include cartodb.js library -->
-    <script src="http://libs.cartocdn.com/cartodb.js/v3/cartodb.js"></script>
+    <div id="impress"> 
+      <div id="map" class="step" data-x="700" data-rotate-y="-45"></div>
 
-    <script>
+      <div id="start" class="step" >
+          <p>Welcome to the Cleveland Metroparks Trail Application!</p>
+          <img src="images/robot_small.png" />
+          <p class='hint_text'>Use the arrow keys to navigate</p>
+      </div>
+    </div>
 
-        var map = new L.Map('map', {
-          zoomControl: true,
-          center: [41.460, -81.67],
-          zoom: 11
-        });
-
-        map.locate({setView: true, maxZoom: 18});
-
-        L.tileLayer('http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png', {
-          attribution: 'Stamen',
-          maxZoom: 15,
-          errorTileUrl: 'http://fashiontech.files.wordpress.com/2008/08/plaid_b_single.jpg?w=256'
-        }).addTo(map)
-         .setZIndex(0);
-
-        L.tileLayer('http://maps.cuyahogacounty.us/arcgis/rest/services/PLAN_TILED/UTC_ROW_Existing/MapServer/WMTS/tile/1.0.0/PLAN_TILED_UTC_ROW_Existing/{default/GoogleMapsCompatible/{z}/{y}/{x}', {
-          attribution: 'Prepared by The Cuyahoga County Planning Commission and Cleveland Metroparks',
-          minZoom: 16,
-          maxZoom: 16,	
-          errorTileUrl: 'http://fashiontech.files.wordpress.com/2008/08/plaid_b_single.jpg?w=256'
-        }).addTo(map)
-         .setZIndex(500);
-
-        L.tileLayer('http://maps.cuyahogacounty.us/arcgis/rest/services/PLAN_TILED/Cuyahoga_LandCover_2011_CPC/MapServer/WMTS/tile/1.0.0/PLAN_TILED_Cuyahoga_LandCover_2011_CPC/default/GoogleMapsCompatible/{z}/{y}/{x}', {
-          attribution: 'Prepared by The Cuyahoga County Planning Commission and Cleveland Metroparks',
-          minZoom: 17,
-          maxZoom: 18,	
-          errorTileUrl: 'http://fashiontech.files.wordpress.com/2008/08/plaid_b_single.jpg?w=256'
-        }).addTo(map)
-         .setZIndex(200);
-
-        L.tileLayer('http://maps.cuyahogacounty.us/arcgis/rest/services/PLAN_TILED/UTC_Parcel_Only/MapServer/WMTS/tile/1.0.0/PLAN_TILED_UTC_Parcel_Only/default/GoogleMapsCompatible/{z}/{y}/{x}', {
-          attribution: 'Prepared by The Cuyahoga County Planning Commission and Cleveland Metroparks',
-          minZoom: 17,
-          maxZoom: 18,	
-          errorTileUrl: 'http://fashiontech.files.wordpress.com/2008/08/plaid_b_single.jpg?w=256'
-        }).addTo(map)
-         .setZIndex(300);
-
-        L.tileLayer('http://maps.cuyahogacounty.us/arcgis/rest/services/PLAN_TILED/UTC_Parcel_Existing/MapServer/WMTS/tile/1.0.0/PLAN_TILED_Cuyahoga_LandCover_2011_CPC/default/GoogleMapsCompatible/{z}/{y}/{x}', {
-          attribution: 'Prepared by The Cuyahoga County Planning Commission and Cleveland Metroparks',
-          minZoom: 16,
-          maxZoom: 16,	
-          errorTileUrl: 'http://fashiontech.files.wordpress.com/2008/08/plaid_b_single.jpg?w=256'
-        }).addTo(map)
-                .setZIndex(400);
-
-        cartodb.createLayer(map, 'http://cleveland-metroparks.cartodb.com/api/v2/viz/05af5a7c-668d-11e3-8914-cb7f69afe66f/viz.json')
-         .addTo(map)
-         .on('done', function(layer) {
-
-          layer.setInteraction(true);
-
-          layer.on('featureOver', function(e, pos, latlng, data) {
-            cartodb.log.log(e, pos, latlng, data);
+      <!-- include cartodb.js library -->
+      <script src="http://libs.cartocdn.com/cartodb.js/v3/cartodb.js"></script>
+  
+      <script>
+  
+          var map = new L.Map('map', {
+            zoomControl: true,
+            center: [41.460, -81.67],
+            zoom: 11
           });
-
-          layer.on('error', function(err) {
-            cartodb.log.log('error: ' + err);
+  
+          map.locate({setView: true, maxZoom: 18});
+  
+          L.tileLayer('http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png', {
+            attribution: 'Stamen',
+            maxZoom: 15,
+            errorTileUrl: 'http://fashiontech.files.wordpress.com/2008/08/plaid_b_single.jpg?w=256'
+          }).addTo(map)
+           .setZIndex(0);
+  
+          L.tileLayer('http://maps.cuyahogacounty.us/arcgis/rest/services/PLAN_TILED/UTC_ROW_Existing/MapServer/WMTS/tile/1.0.0/PLAN_TILED_UTC_ROW_Existing/{default/GoogleMapsCompatible/{z}/{y}/{x}', {
+            attribution: 'Prepared by The Cuyahoga County Planning Commission and Cleveland Metroparks',
+            minZoom: 16,
+            maxZoom: 16,	
+            errorTileUrl: 'http://fashiontech.files.wordpress.com/2008/08/plaid_b_single.jpg?w=256'
+          }).addTo(map)
+           .setZIndex(500);
+  
+          L.tileLayer('http://maps.cuyahogacounty.us/arcgis/rest/services/PLAN_TILED/Cuyahoga_LandCover_2011_CPC/MapServer/WMTS/tile/1.0.0/PLAN_TILED_Cuyahoga_LandCover_2011_CPC/default/GoogleMapsCompatible/{z}/{y}/{x}', {
+            attribution: 'Prepared by The Cuyahoga County Planning Commission and Cleveland Metroparks',
+            minZoom: 17,
+            maxZoom: 18,	
+            errorTileUrl: 'http://fashiontech.files.wordpress.com/2008/08/plaid_b_single.jpg?w=256'
+          }).addTo(map)
+           .setZIndex(200);
+  
+          L.tileLayer('http://maps.cuyahogacounty.us/arcgis/rest/services/PLAN_TILED/UTC_Parcel_Only/MapServer/WMTS/tile/1.0.0/PLAN_TILED_UTC_Parcel_Only/default/GoogleMapsCompatible/{z}/{y}/{x}', {
+            attribution: 'Prepared by The Cuyahoga County Planning Commission and Cleveland Metroparks',
+            minZoom: 17,
+            maxZoom: 18,	
+            errorTileUrl: 'http://fashiontech.files.wordpress.com/2008/08/plaid_b_single.jpg?w=256'
+          }).addTo(map)
+           .setZIndex(300);
+  
+          L.tileLayer('http://maps.cuyahogacounty.us/arcgis/rest/services/PLAN_TILED/UTC_Parcel_Existing/MapServer/WMTS/tile/1.0.0/PLAN_TILED_Cuyahoga_LandCover_2011_CPC/default/GoogleMapsCompatible/{z}/{y}/{x}', {
+            attribution: 'Prepared by The Cuyahoga County Planning Commission and Cleveland Metroparks',
+            minZoom: 16,
+            maxZoom: 16,	
+            errorTileUrl: 'http://fashiontech.files.wordpress.com/2008/08/plaid_b_single.jpg?w=256'
+          }).addTo(map)
+                  .setZIndex(400);
+  
+          cartodb.createLayer(map, 'http://cleveland-metroparks.cartodb.com/api/v2/viz/05af5a7c-668d-11e3-8914-cb7f69afe66f/viz.json')
+           .addTo(map)
+           .on('done', function(layer) {
+  
+            layer.setInteraction(true);
+  
+            layer.on('featureOver', function(e, pos, latlng, data) {
+              cartodb.log.log(e, pos, latlng, data);
+            });
+  
+            layer.on('error', function(err) {
+              cartodb.log.log('error: ' + err);
+            });
+          }).on('error', function() {
+            cartodb.log.log("some error occurred");
           });
-        }).on('error', function() {
-          cartodb.log.log("some error occurred");
-        });
+  
+          L.tileLayer('http://{s}.tile.stamen.com/toner-labels/{z}/{x}/{y}.png', {
+            attribution: 'Stamen',
+            maxZoom: 18
+          }).addTo(map)
+                  .setZIndex(600);
+      </script>
 
-        L.tileLayer('http://{s}.tile.stamen.com/toner-labels/{z}/{x}/{y}.png', {
-          attribution: 'Stamen',
-          maxZoom: 18
-        }).addTo(map)
-                .setZIndex(600);
+      <div class="fallback-message">
+          <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+          <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+      </div>                  
 
-    </script>
+      <script type="text/javascript" src="js/impress.js"></script>
+      <script type="text/javascript">impress().init();</script>
+
   </body>
 </html>
