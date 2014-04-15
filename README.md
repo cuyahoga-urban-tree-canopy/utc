@@ -1,4 +1,4 @@
-![header](https://raw.github.com/smathermather/urban-tree-canopy/master/UTC.png)
+![header](https://raw.github.com/smathermather/urban-tree-canopy/master/img/UTC.png)
 
 urban-tree-canopy
 =================
