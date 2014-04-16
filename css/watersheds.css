@@ -11,6 +11,17 @@ Watersheds */
   polygon-opacity: 0.8;
 }
 
+#utc_watersheds::labels
+[zoom = 11 ]
+{
+  text-name: [name];
+  text-halo-fill: #1E6823;
+  text-halo-radius: 1.5;
+  text-face-name: 'DejaVu Sans Book';
+  text-size: 12;
+  text-fill: #CCCCCC;
+}
+
 // Watershed breakdown with zoom limits
 
 #utc_watersheds [ percent_canopy <= 1 ] [zoom < 12] [zoom > 9] {
