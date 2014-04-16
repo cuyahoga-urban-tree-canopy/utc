@@ -158,7 +158,10 @@
           attribution: 'Stamen',
           maxZoom: 18
         }).addTo(map1)
-                .setZIndex(-400);                
+                .setZIndex(-400);    
+
+        map.sync(map1);
+        map1.sync(map);
 
     </script>
   </body>
