@@ -62,7 +62,7 @@
 
   div.cartodb-infowindow {
     position: absolute;
-    z-index: 1012;
+    z-index: 11012;
   }
 
   div.cartodb-popup {
