@@ -19,6 +19,10 @@
         #leftedge1 { float: left; }        
         #leftedge1 { width: 2.5%; height: 100%; }
         #map1 { width: 95%; height: 95%; }
+        #righteredge { float: right; }
+        #righteredge { width: 2.5%; height: 100%; }        
+        #footer1 { width: 100%; height: 5%; }
+        #footer1 { background-color: #958194; }
     </style>
     <link rel="stylesheet" href="css/cartodb.css" />
     <!--[if lte IE 8]>
@@ -32,12 +36,18 @@
     <div id="rightedge"></div>
     <div id="footer">
       <form>
-        <input type="image" src="img/arrows.png"onClick="parent.location='#map1'">
+        <input type="image" src="img/arrow-down.png"onClick="parent.location='#map1'">
       </form> 
     </div>    
     <div id="leftedge1"></div>
     <div id="map1"></div>
-    
+    <div id="righteredge"></div>
+    <div id="footer1">
+      <form>
+        <input type="image" src="img/arrow-up.png"onClick="parent.location='#'">
+      </form> 
+    </div>    
+
     <!-- include cartodb.js library -->
     <script src="http://libs.cartocdn.com/cartodb.js/v3/cartodb.js"></script>
 
