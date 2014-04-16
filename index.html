@@ -49,7 +49,7 @@
           maxZoom: 16,	
           errorTileUrl: 'http://fashiontech.files.wordpress.com/2008/08/plaid_b_single.jpg?w=256'
         }).addTo(map)
-         .setZIndex(500);
+         .setZIndex(-500);
 
         L.tileLayer('http://maps.cuyahogacounty.us/arcgis/rest/services/PLAN_TILED/Cuyahoga_LandCover_2011_CPC/MapServer/WMTS/tile/1.0.0/PLAN_TILED_Cuyahoga_LandCover_2011_CPC/default/GoogleMapsCompatible/{z}/{y}/{x}', {
           attribution: 'Prepared by The Cuyahoga County Planning Commission and Cleveland Metroparks',
@@ -57,7 +57,7 @@
           maxZoom: 18,	
           errorTileUrl: 'http://fashiontech.files.wordpress.com/2008/08/plaid_b_single.jpg?w=256'
         }).addTo(map)
-         .setZIndex(200);
+         .setZIndex(-800);
 
         L.tileLayer('http://maps.cuyahogacounty.us/arcgis/rest/services/PLAN_TILED/UTC_Parcel_Only/MapServer/WMTS/tile/1.0.0/PLAN_TILED_UTC_Parcel_Only/default/GoogleMapsCompatible/{z}/{y}/{x}', {
           attribution: 'Prepared by The Cuyahoga County Planning Commission and Cleveland Metroparks',
@@ -65,7 +65,7 @@
           maxZoom: 18,	
           errorTileUrl: 'http://fashiontech.files.wordpress.com/2008/08/plaid_b_single.jpg?w=256'
         }).addTo(map)
-         .setZIndex(300);
+         .setZIndex(-700);
 
         L.tileLayer('http://maps.cuyahogacounty.us/arcgis/rest/services/PLAN_TILED/UTC_Parcel_Existing/MapServer/WMTS/tile/1.0.0/PLAN_TILED_Cuyahoga_LandCover_2011_CPC/default/GoogleMapsCompatible/{z}/{y}/{x}', {
           attribution: 'Prepared by The Cuyahoga County Planning Commission and Cleveland Metroparks',
@@ -73,7 +73,7 @@
           maxZoom: 16,	
           errorTileUrl: 'http://fashiontech.files.wordpress.com/2008/08/plaid_b_single.jpg?w=256'
         }).addTo(map)
-                .setZIndex(400);
+                .setZIndex(-600);
 
         cartodb.createLayer(map, 'http://cleveland-metroparks.cartodb.com/api/v2/viz/05af5a7c-668d-11e3-8914-cb7f69afe66f/viz.json')
          .addTo(map)
@@ -113,7 +113,7 @@
           attribution: 'Stamen',
           maxZoom: 18
         }).addTo(map)
-                .setZIndex(600);
+                .setZIndex(-400);
 
     </script>
   </body>
