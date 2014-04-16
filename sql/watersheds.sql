@@ -8,3 +8,13 @@ SELECT
   round(exgr_ac) AS "grass",
   the_geom_webmercator
 FROM utc_watersheds;
+
+SELECT
+  cartodb_id,
+  poplpct AS percent_possible,
+  extcpct * 100 AS existing,
+  poplimppct * 100 AS impervious,
+  poplvegpct * 100 AS veg,
+  notsuitpct * 100 AS nots,
+  the_geom_webmercator
+FROM utc_watersheds
