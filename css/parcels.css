@@ -1,4 +1,18 @@
-/** simple visualization */
+/** parcel link icons with markers to make touchable area larger */
+
+#parcels
+[zoom = 18]
+{
+  marker-opacity: 1;
+  marker-line-color: #FFF;
+  marker-line-width: 1.5;
+  marker-line-opacity: 1;
+  marker-placement: point;
+  marker-type: ellipse;
+  marker-width: 25;
+  marker-fill: #FFFFFF;
+  marker-allow-overlap: true;
+}
 
 #parcels
 [zoom = 18]
