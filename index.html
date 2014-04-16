@@ -78,25 +78,11 @@
         }).addTo(map)
                 .setZIndex(-600);
 
-        var layerUrl = 'http://cleveland-metroparks.cartodb.com/api/v2/viz/05af5a7c-668d-11e3-8914-cb7f69afe66f/viz.json';
-        cartodb.createLayer(map, layerUrl).addTo(map);
+        var summary = 'http://cleveland-metroparks.cartodb.com/api/v2/viz/05af5a7c-668d-11e3-8914-cb7f69afe66f/viz.json';
+        cartodb.createLayer(map, summary).addTo(map);
 
-        cartodb.createLayer(map, 'http://cleveland-metroparks.cartodb.com/api/v2/viz/cd539a8a-a575-11e3-a48a-0e10bcd91c2b/viz.json')
-         .addTo(map)
-         .on('done', function(layer) {
-
-          layer.setInteraction(true);
-
-          layer.on('featureOver', function(e, pos, latlng, data) {
-            cartodb.log.log(e, pos, latlng, data);
-          });
-
-          layer.on('error', function(err) {
-            cartodb.log.log('error: ' + err);
-          });
-        }).on('error', function() {
-          cartodb.log.log("some error occurred");
-        });
+        var parcel = 'http://cleveland-metroparks.cartodb.com/api/v2/viz/cd539a8a-a575-11e3-a48a-0e10bcd91c2b/viz.json';
+        cartodb.createLayer(map, parcel).addTo(map);
 
         L.tileLayer('http://{s}.tile.stamen.com/toner-labels/{z}/{x}/{y}.png', {
           attribution: 'Stamen',
