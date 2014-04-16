@@ -1,0 +1,15 @@
+/** simple visualization */
+
+#parcels
+[zoom = 18]
+{
+  marker-file: url(http://cleveland-metroparks.github.io/urban-tree-canopy/img/link.png);
+  marker-opacity: 0.9;
+  marker-line-color: #FFF;
+  marker-line-width: 1.5;
+  marker-line-opacity: 1;
+  marker-placement: point;
+  marker-type: ellipse;
+  marker-width: 12;
+  marker-allow-overlap: true;
+}
