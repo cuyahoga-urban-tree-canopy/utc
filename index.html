@@ -81,9 +81,8 @@
         var layerUrl = 'http://cleveland-metroparks.cartodb.com/api/v2/viz/05af5a7c-668d-11e3-8914-cb7f69afe66f/viz.json';
         cartodb.createLayer(map, layerUrl).addTo(map);
 
-        cartodb.createLayer(map, 'http://cleveland-metroparks.cartodb.com/api/v2/viz/cd539a8a-a575-11e3-a48a-0e10bcd91c2b/viz.json')
-         .addTo(map)
-         .on('done', function(layer) {
+        var layerUrl = 'http://cleveland-metroparks.cartodb.com/api/v2/viz/cd539a8a-a575-11e3-a48a-0e10bcd91c2b/viz.json';
+        cartodb.createLayer(map, layerUrl).addTo(map);
 
           layer.setInteraction(true);
 
