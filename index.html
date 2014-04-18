@@ -165,11 +165,11 @@
         }).addTo(map1)
                 .setZIndex(-600);
 
-        var summary = 'http://cleveland-metroparks.cartodb.com/api/v2/viz/91252960-c533-11e3-a775-0e10bcd91c2b/viz.json';
-        cartodb.createLayer(map1, summary).addTo(map1);
+        var summary1 = 'http://cleveland-metroparks.cartodb.com/api/v2/viz/91252960-c533-11e3-a775-0e10bcd91c2b/viz.json';
+        cartodb.createLayer(map1, summary1).addTo(map1);
 
-        var parcel = 'http://cleveland-metroparks.cartodb.com/api/v2/viz/cd539a8a-a575-11e3-a48a-0e10bcd91c2b/viz.json';
-        cartodb.createLayer(map1, parcel).addTo(map1);
+        var parcel1 = 'http://cleveland-metroparks.cartodb.com/api/v2/viz/cd539a8a-a575-11e3-a48a-0e10bcd91c2b/viz.json';
+        cartodb.createLayer(map1, parcel1).addTo(map1);
 
         L.tileLayer('http://{s}.tile.stamen.com/toner-labels/{z}/{x}/{y}.png', {
           attribution: 'Stamen',
