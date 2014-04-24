@@ -64,9 +64,8 @@
           center: [41.460, -81.67],
           zoom: 11
         });
-
         map.locate({setView: true, maxZoom: 18});
-        L.tileLayer('http://{s}.sm.mapstack.stamen.com/(toner-lite,(watercolor,mapbox-water%5Bdestination-in%5D))/{z}/{x}/{y}.png', {
+        L.tileLayer('http://{s}.sm.mapstack.stamen.com/(toner-lite,(watercolor,$fff%5B@0%5D,$fff%5Bhsl-saturation@50%5D,mapbox-water%5Bdestination-in%5D)%5B@50%5D/{z}/{x}/{y}.png', {
           attribution: 'Stamen',
           maxZoom: 15,
           errorTileUrl: 'http://fashiontech.files.wordpress.com/2008/08/plaid_b_single.jpg?w=256'
