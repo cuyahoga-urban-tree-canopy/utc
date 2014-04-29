@@ -169,7 +169,7 @@
         var parcel1 = 'http://cleveland-metroparks.cartodb.com/api/v2/viz/cd539a8a-a575-11e3-a48a-0e10bcd91c2b/viz.json';
         cartodb.createLayer(map1, parcel1).addTo(map1);
 
-        L.tileLayer('http://{s}.tile.stamen.com/toner-labels/{z}/{x}/{y}.png', {
+        L.tileLayer('http://{s}.sm.mapstack.stamen.com/((watercolor,$fff%5B@50%5D,$fff%5Bhsl-saturation@50%5D,mapbox-water%5Bdestination-in%5D),(toner-hybrid,$fff%5B@0%5D)%5B@50%5D)/{z}/{x}/{y}.png', {
           attribution: 'Stamen',
           maxZoom: 18
         }).addTo(map1)
