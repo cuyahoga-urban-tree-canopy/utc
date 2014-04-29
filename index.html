@@ -65,13 +65,14 @@
           zoom: 11
         });
         map.locate({setView: true, maxZoom: 18});
-        L.tileLayer('http://{s}.sm.mapstack.stamen.com/(toner-lite,(watercolor,$fff%5B@0%5D,$fff%5Bhsl-saturation@50%5D,mapbox-water%5Bdestination-in%5D)%5B@50%5D/{z}/{x}/{y}.png', {
+
+/*        L.tileLayer('http://{s}.sm.mapstack.stamen.com/(toner-lite,(watercolor,$fff%5B@0%5D,$fff%5Bhsl-saturation@50%5D,mapbox-water%5Bdestination-in%5D)%5B@50%5D/{z}/{x}/{y}.png', {
           attribution: 'Stamen',
           maxZoom: 15,
           errorTileUrl: 'http://fashiontech.files.wordpress.com/2008/08/plaid_b_single.jpg?w=256'
         }).addTo(map)
          .setZIndex(0);
-
+*/
         L.tileLayer('https://maps.cuyahogacounty.us/arcgis/rest/services/PLAN_TILED/UTC_ROW_Existing/MapServer/WMTS/tile/1.0.0/PLAN_TILED_UTC_ROW_Existing/{default/GoogleMapsCompatible/{z}/{y}/{x}', {
           attribution: 'Prepared by The Cuyahoga County Planning Commission and Cleveland Metroparks',
           minZoom: 16,
@@ -110,11 +111,11 @@
         var parcel = 'http://cleveland-metroparks.cartodb.com/api/v2/viz/cd539a8a-a575-11e3-a48a-0e10bcd91c2b/viz.json';
         cartodb.createLayer(map, parcel).addTo(map);
 
-        L.tileLayer('http://{s}.tile.stamen.com/toner-labels/{z}/{x}/{y}.png', {
+        L.tileLayer('http://{s}.sm.mapstack.stamen.com/((watercolor,$fff%5B@50%5D,$fff%5Bhsl-saturation@50%5D,mapbox-water%5Bdestination-in%5D),(toner-hybrid,$fff%5B@50%5D))/{z}/{x}/{y}.png', {
           attribution: 'Stamen',
           maxZoom: 18
         }).addTo(map)
-                .setZIndex(-400);
+                .setZIndex(1000);
 
         var map1 = new L.Map('map1', {
           zoomControl: true,
